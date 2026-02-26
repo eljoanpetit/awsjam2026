@@ -7,7 +7,7 @@ const translations = {
     who: "Quién",
     how: "Cómo",
     when: "Cuándo",
-    what_desc: "Hasta 100 equipos demostrando sus habilidades en AWS",
+    what_desc: "Hasta 100 equipos de 2 a 4 personas demostrando sus habilidades en AWS",
     who_desc: "Alumnado matriculado en centros incorporados al programa AWS ACADEMY con una ",
     who_highlight: "suscripción a AWS SkillBuilder activa",
     how_desc: "La persona responsable (tutora/tutor) debe realizar el registro del equipo o equipos que participan.",
@@ -15,7 +15,9 @@ const translations = {
     days: "Días",
     hours: "Horas",
     minutes: "Minutos",
-    seconds: "Segundos"
+    seconds: "Segundos",
+    what_is_jam: "¿Qué es un AWS JAM?",
+    organizes: "Organiza"
   },
   ca: {
     challenge: "T'ho vas a perdre?",
@@ -23,7 +25,7 @@ const translations = {
     who: "Qui",
     how: "Com",
     when: "Quan",
-    what_desc: "Fins a 100 equips demostrant les seues habilitats en AWS",
+    what_desc: "Fins a 100 equips de 2 a 4 persones demostrant les seues habilitats en AWS",
     who_desc: "Alumnat matriculat en centres incorporats al programa AWS ACADEMY amb una ",
     who_highlight: "subscripció a AWS SkillBuilder activa",
     how_desc: "La persona responsable (tutora/tutor) ha de fer el registre de l'equip o equips que participen.",
@@ -31,15 +33,17 @@ const translations = {
     days: "Dies",
     hours: "Hores",
     minutes: "Minuts",
-    seconds: "Segons"
+    seconds: "Segons",
+    what_is_jam: "Què és un AWS JAM?",
+    organizes: "Organitza"
   },
   gl: {
-    challenge: "Vascho perder?",
+    challenge: "Vas botalo de menos?",
     what: "Que",
     who: "Quen",
     how: "Como",
     when: "Cando",
-    what_desc: "Ata 100 equipos demostrando as súas habilidades en AWS",
+    what_desc: "Ata 100 equipos de 2 a 4 persoas demostrando as súas habilidades en AWS",
     who_desc: "Alumnado matriculado en centros incorporados ao programa AWS ACADEMY cunha ",
     who_highlight: "subscrición a AWS SkillBuilder activa",
     how_desc: "A persoa responsable (titora/titor) debe realizar o rexistro do equipo ou equipos que participan.",
@@ -47,15 +51,17 @@ const translations = {
     days: "Días",
     hours: "Horas",
     minutes: "Minutos",
-    seconds: "Segundos"
+    seconds: "Segundos",
+    what_is_jam: "Que é un AWS JAM?",
+    organizes: "Organiza"
   },
   eu: {
-    challenge: "Galduko duzu?",
+    challenge: "Galduko al duzu?",
     what: "Zer",
     who: "Nor",
     how: "Nola",
     when: "Noiz",
-    what_desc: "100 talde arte AWSko trebetasunak erakusten",
+    what_desc: "2-4 pertsonaz osatutako 100 talde arte AWSko trebetasunak erakusten",
     who_desc: "AWS ACADEMY programan sartuta dauden zentroetan matrikulatutako ikasleak, ",
     who_highlight: "AWS SkillBuilder harpidetza aktiboa dutenak",
     how_desc: "Arduradunak (tutoreak) eman behar du izena parte hartzen duen taldearen edo taldeen izenean.",
@@ -63,7 +69,9 @@ const translations = {
     days: "Egunak",
     hours: "Orduak",
     minutes: "Minutuak",
-    seconds: "Segundoak"
+    seconds: "Segundoak",
+    what_is_jam: "Zer da AWS JAM bat?",
+    organizes: "Antolatzaileak"
   }
 };
 

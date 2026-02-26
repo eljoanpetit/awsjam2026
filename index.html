@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS JAM 2026 - Barcelona State Competition</title>
+    <title>AWS JAM 2026 - Clasificatoria online - Final presencial en Barcelona</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -64,7 +64,7 @@
                 who: "Quién",
                 how: "Cómo",
                 when: "Cuándo",
-                what_desc: "Hasta 100 equipos demostrando sus habilidades en AWS",
+                what_desc: "Hasta 100 equipos de 2 a 4 personas demostrando sus habilidades en AWS",
                 who_desc: "Alumnado matriculado en centros incorporados al programa AWS ACADEMY con\u00A0una\u00A0",
                 who_highlight: "suscripción a AWS SkillBuilder activa",
                 how_desc: "La persona responsable (tutora/tutor) debe realizar el registro del equipo o equipos que participan.",
@@ -73,7 +73,9 @@
                 hours: "Horas",
                 minutes: "Minutos",
                 seconds: "Segundos",
-                date_label: "25 MARZO 2026 @ 17:00"
+                date_label: "25 MARZO 2026 @ 17:00",
+                what_is_jam: "¿Qué es un AWS JAM?",
+                organizes: "Organiza"
             },
             ca: {
                 challenge: "T'ho vas a perdre?",
@@ -81,7 +83,7 @@
                 who: "Qui",
                 how: "Com",
                 when: "Quan",
-                what_desc: "Fins a 100 equips demostrant les seues habilitats en AWS",
+                what_desc: "Fins a 100 equips de 2 a 4 persones demostrant les seues habilitats en AWS",
                 who_desc: "Alumnat matriculat en centres incorporats al programa AWS ACADEMY amb\u00A0una\u00A0",
                 who_highlight: "subscripció a AWS SkillBuilder activa",
                 how_desc: "La persona responsable (tutora/tutor) ha de fer el registre de l'equip o equips que participen.",
@@ -90,15 +92,17 @@
                 hours: "Hores",
                 minutes: "Minuts",
                 seconds: "Segons",
-                date_label: "25 MARÇ 2026 @ 17:00"
+                date_label: "25 MARÇ 2026 @ 17:00",
+                what_is_jam: "Què és un AWS JAM?",
+                organizes: "Organitza"
             },
             gl: {
-                challenge: "Vascho perder?",
+                challenge: "Vas botalo de menos?",
                 what: "Que",
                 who: "Quen",
                 how: "Como",
                 when: "Cando",
-                what_desc: "Ata 100 equipos demostrando as súas habilidades en AWS",
+                what_desc: "Ata 100 equipos de 2 a 4 persoas demostrando as súas habilidades en AWS",
                 who_desc: "Alumnado matriculado en centros incorporados ao programa AWS ACADEMY cunha\u00A0",
                 who_highlight: "subscrición a AWS SkillBuilder activa",
                 how_desc: "A persoa responsable (titora/titor) debe realizar o rexistro do equipo o equipos que participan.",
@@ -107,15 +111,17 @@
                 hours: "Horas",
                 minutes: "Minutos",
                 seconds: "Segundos",
-                date_label: "25 MARZO 2026 @ 17:00"
+                date_label: "25 MARZO 2026 @ 17:00",
+                what_is_jam: "Que é un AWS JAM?",
+                organizes: "Organiza"
             },
             eu: {
-                challenge: "Galduko duzu?",
+                challenge: "Galduko al duzu?",
                 what: "Zer",
                 who: "Nor",
                 how: "Nola",
                 when: "Noiz",
-                what_desc: "100 talde arte AWSko trebetasunak erakusten",
+                what_desc: "2-4 pertsonaz osatutako 100 talde arte AWSko trebetasunak erakusten",
                 who_desc: "AWS ACADEMY programan sartuta dauden zentroetan matrikulatutako ikasleak,\u00A0",
                 who_highlight: "AWS SkillBuilder harpidetza aktiboa dutenak",
                 how_desc: "Arduradunak (tutoreak) eman behar du izena parte hartzen duen taldearen edo taldeen izenean.",
@@ -124,7 +130,9 @@
                 hours: "Orduak",
                 minutes: "Minutuak",
                 seconds: "Segundoak",
-                date_label: "2026ko MARTXOAREN 25ean @ 17:00"
+                date_label: "2026ko MARTXOAREN 25ean @ 17:00",
+                what_is_jam: "Zer da AWS JAM bat?",
+                organizes: "Antolatzaileak"
             }
         };
 
@@ -187,9 +195,13 @@
                     <nav className="fixed top-0 w-full z-50 glass border-b border-white/5">
                         <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
                             <div className="flex items-center gap-3">
-                                <div className="flex items-center gap-2 bg-white rounded-lg p-1">
-                                    <img src="https://agora.xtec.cat/iticbcn/wp-content/uploads/usu2389/2023/06/cropped-Imagotipo-1.png" alt="Institut TIC de Barcelona" className="h-7 md:h-10" />
-                                    <div className="w-[1px] h-5 bg-slate-200"></div>
+                                <div className="flex items-center gap-2 bg-white rounded-lg p-1 pr-3">
+                                    <img src="https://agora.xtec.cat/iticbcn/wp-content/uploads/usu2389/2023/06/cropped-Imagotipo-1.png" alt="Institut TIC de Barcelona Logo" className="h-7 md:h-10" />
+                                    <div className="text-black font-bold text-[10px] md:text-xs leading-tight tracking-tight flex flex-col justify-center">
+                                        <span>Institut TIC</span>
+                                        <span>de Barcelona</span>
+                                    </div>
+                                    <div className="w-[1px] h-5 bg-slate-200 mx-1"></div>
                                     <img src="https://www.awsacademy.com/webruntime/org-asset/1816f865fb/resource/0814N0000019OPK/images/logo.png" alt="AWS Academy" className="h-7 md:h-10" />
                                 </div>
                                 <span className="font-black text-sm md:text-lg tracking-tighter uppercase hidden sm:block">
@@ -201,6 +213,7 @@
                                 <button onClick={() => scrollTo('que')} className="hover:text-itic-green transition-all">{t.what}</button>
                                 <button onClick={() => scrollTo('qui')} className="hover:text-itic-green transition-all">{t.who}</button>
                                 <button onClick={() => scrollTo('com')} className="hover:text-itic-green transition-all">{t.how}</button>
+                                <button onClick={() => scrollTo('organitza')} className="hover:text-itic-green transition-all">{t.organizes}</button>
                                 <button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="hover:text-itic-green transition-all">{t.when}</button>
                             </div>
 
@@ -244,11 +257,14 @@
                     {/* QUÉ */}
                     <section id="que" className="section-full items-center bg-[#0a1a33]/40 text-center">
                         <div className="max-w-6xl w-full flex flex-col items-center space-y-8 md:space-y-12 px-4">
-                            <div className="glass p-8 md:p-16 rounded-[40px] md:rounded-[60px] border-white/10 relative overflow-hidden w-full">
+                            <div className="glass p-8 md:p-16 rounded-[40px] md:rounded-[60px] border-white/10 relative overflow-hidden w-full flex flex-col items-center">
                                 <h2 className="text-4xl md:text-8xl font-black mb-6 md:mb-10 uppercase text-itic-blue tracking-tighter">{t.what}</h2>
-                                <p className="text-xl md:text-5xl leading-tight font-bold text-white/95">
+                                <p className="text-xl md:text-5xl leading-tight font-bold text-white/95 mb-8 md:mb-12">
                                     {t.what_desc}
                                 </p>
+                                <a href="https://aws.amazon.com/es/training/digital/aws-jam/" target="_blank" rel="noopener noreferrer" className="bg-itic-blue hover:bg-blue-700 text-white px-6 py-3 md:px-10 md:py-5 rounded-full font-bold text-sm md:text-xl uppercase tracking-widest transition-all hover:scale-105 shadow-[0_0_30px_rgba(47,41,161,0.5)]">
+                                    {t.what_is_jam}
+                                </a>
                             </div>
                             <div className="flex justify-center w-full">
                                 <div className="relative group">
@@ -297,12 +313,47 @@
                         </div>
                     </section>
 
+                    {/* ORGANITZA */}
+                    <section id="organitza" className="section-full items-center bg-[#0a1a33]/60 text-center">
+                        <div className="max-w-6xl w-full px-4">
+                            <h2 className="text-4xl md:text-8xl font-black mb-12 md:mb-20 uppercase text-itic-blue tracking-tighter">{t.organizes}</h2>
+                            <div className="glass p-8 md:p-16 rounded-[40px] border-white/10 shadow-2xl">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 w-full max-w-4xl mx-auto">
+                                    {/* Dalt Esquerra: Institut TIC */}
+                                    <div className="bg-white p-6 rounded-3xl shadow-xl hover:scale-105 transition-transform flex items-center justify-center gap-4 h-32 md:h-40">
+                                        <img src="https://agora.xtec.cat/iticbcn/wp-content/uploads/usu2389/2023/06/cropped-Imagotipo-1.png" alt="Institut TIC de Barcelona Logo" className="h-14 md:h-20 object-contain" />
+                                        <div className="text-black font-bold text-base md:text-xl leading-tight tracking-tight flex flex-col justify-center text-left">
+                                            <span>Institut TIC</span>
+                                            <span>de Barcelona</span>
+                                        </div>
+                                    </div>
+                                    {/* Dalt Dreta: Consorci d'Educació */}
+                                    <div className="bg-white p-6 rounded-3xl shadow-xl hover:scale-105 transition-transform flex items-center justify-center h-32 md:h-40">
+                                        <img src="https://agora.xtec.cat/iticbcn/wp-content/uploads/usu2389/2024/01/logo_CEB.png" alt="Consorci d'Educació de Barcelona" className="h-20 md:h-28 object-contain" />
+                                    </div>
+                                    {/* Baix Esquerra: AWS Academy */}
+                                    <div className="bg-white p-6 rounded-3xl shadow-xl hover:scale-105 transition-transform flex items-center justify-center h-32 md:h-40">
+                                        <img src="https://www.awsacademy.com/webruntime/org-asset/1816f865fb/resource/0814N0000019OPK/images/logo.png" alt="AWS Academy" className="h-16 md:h-24 object-contain" />
+                                    </div>
+                                    {/* Baix Dreta: Departament d'Educació */}
+                                    <div className="bg-white p-6 rounded-3xl shadow-xl hover:scale-105 transition-transform flex items-center justify-center h-32 md:h-40">
+                                        <img src="https://identitatcorporativa.gencat.cat/web/.content/Documentacio/descarregues/dpt/COLOR/Educacio/educacio_h3.jpg" alt="Departament d'Educació de Catalunya" className="h-20 md:h-28 w-full object-contain mix-blend-multiply" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* Footer */}
                     <footer className="py-12 glass border-t border-white/5 text-center">
                         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6">
-                            <div className="flex items-center gap-3 bg-white rounded-lg p-2">
-                                <img src="https://agora.xtec.cat/iticbcn/wp-content/uploads/usu2389/2023/06/cropped-Imagotipo-1.png" alt="Institut TIC de Barcelona" className="h-8 md:h-10" />
-                                <div className="w-[1px] h-6 md:h-8 bg-slate-200"></div>
+                            <div className="flex items-center gap-3 bg-white rounded-lg p-2 pr-4">
+                                <img src="https://agora.xtec.cat/iticbcn/wp-content/uploads/usu2389/2023/06/cropped-Imagotipo-1.png" alt="Institut TIC de Barcelona Logo" className="h-8 md:h-10" />
+                                <div className="text-black font-bold text-xs md:text-sm leading-tight tracking-tight flex flex-col justify-center text-left">
+                                    <span>Institut TIC</span>
+                                    <span>de Barcelona</span>
+                                </div>
+                                <div className="w-[1px] h-6 md:h-8 bg-slate-200 mx-2"></div>
                                 <img src="https://www.awsacademy.com/webruntime/org-asset/1816f865fb/resource/0814N0000019OPK/images/logo.png" alt="AWS Academy" className="h-8 md:h-10" />
                             </div>
                             <div className="text-white/30 text-[9px] md:text-[10px] uppercase tracking-[0.4em] font-bold">
