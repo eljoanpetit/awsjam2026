@@ -16,6 +16,10 @@ const translations = {
     hours: "Horas",
     minutes: "Minutos",
     seconds: "Segundos",
+    date_online: "25 MARZO 2026 @ 17:00",
+    label_online: "Clasificatoria Online",
+    date_final: "12 JUNIO 2026 @ 10:00",
+    label_final: "Final presencial Barcelona",
     what_is_jam: "¿Qué es un AWS JAM?",
     organizes: "Organiza"
   },
@@ -34,6 +38,10 @@ const translations = {
     hours: "Hores",
     minutes: "Minuts",
     seconds: "Segons",
+    date_online: "25 MARÇ 2026 @ 17:00",
+    label_online: "Classificatòria Online",
+    date_final: "12 JUNY 2026 @ 10:00",
+    label_final: "Final presencial Barcelona",
     what_is_jam: "Què és un AWS JAM?",
     organizes: "Organitza"
   },
@@ -52,6 +60,10 @@ const translations = {
     hours: "Horas",
     minutes: "Minutos",
     seconds: "Segundos",
+    date_online: "25 MARZO 2026 @ 17:00",
+    label_online: "Clasificatoria en liña",
+    date_final: "12 XUÑO 2026 @ 10:00",
+    label_final: "Final presencial Barcelona",
     what_is_jam: "Que é un AWS JAM?",
     organizes: "Organiza"
   },
@@ -70,6 +82,10 @@ const translations = {
     hours: "Orduak",
     minutes: "Minutuak",
     seconds: "Segundoak",
+    date_online: "2026ko MARTXOAREN 25ean @ 17:00",
+    label_online: "Online sailkapena",
+    date_final: "2026ko EKAINAREN 12an @ 10:00",
+    label_final: "Aurrez aurreko finala Bartzelonan",
     what_is_jam: "Zer da AWS JAM bat?",
     organizes: "Antolatzaileak"
   }
@@ -96,11 +112,11 @@ const Countdown = ({ targetDate, lang }) => {
   const t = translations[lang];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center w-full">
       {['days', 'hours', 'minutes', 'seconds'].map(unit => (
-        <div key={unit} className="glass p-4 rounded-xl">
-          <div className="text-4xl md:text-6xl font-black text-orange-500">{timeLeft[unit]}</div>
-          <div className="text-xs uppercase tracking-widest">{t[unit]}</div>
+        <div key={unit} className="glass p-4 rounded-xl flex flex-col items-center">
+          <div className="text-3xl md:text-5xl lg:text-4xl xl:text-5xl font-black text-orange-500 tabular-nums">{timeLeft[unit].toString().padStart(2, '0')}</div>
+          <div className="text-xs uppercase tracking-widest mt-2">{t[unit]}</div>
         </div>
       ))}
     </div>
@@ -109,7 +125,8 @@ const Countdown = ({ targetDate, lang }) => {
 
 const App = () => {
   const [lang, setLang] = useState('es');
-  const targetDate = new Date('2026-03-25T17:00:00').getTime();
+  const targetDateOnline = new Date('2026-03-25T17:00:00').getTime();
+  const targetDateFinal = new Date('2026-06-12T10:00:00').getTime();
   const t = translations[lang];
 
   const scrollTo = (id) => {
@@ -147,14 +164,30 @@ const App = () => {
 
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
-        <div className="text-center space-y-8 max-w-4xl">
+        <div className="text-center space-y-12 max-w-7xl w-full">
           <h1 className="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-none">
             {t.challenge}
           </h1>
-          <div className="inline-block glass px-6 py-2 rounded-full border border-orange-500/50 text-orange-400 font-bold mb-8">
-             25 MARZO 2026 @ 17:00
+          
+          <div className="flex flex-col lg:flex-row gap-12 w-full justify-center items-center">
+            {/* Online Qualifier */}
+            <div className="flex flex-col items-center space-y-4 w-full max-w-3xl">
+              <div className="inline-block glass px-6 py-2 rounded-full border border-orange-500/50 text-orange-400 font-bold mb-4 flex flex-col items-center leading-tight">
+                 <span className="uppercase">{t.label_online}</span>
+                 <span className="text-sm mt-1">{t.date_online}</span>
+              </div>
+              <Countdown targetDate={targetDateOnline} lang={lang} />
+            </div>
+
+            {/* In-person Final */}
+            <div className="flex flex-col items-center space-y-4 w-full max-w-3xl">
+              <div className="inline-block glass px-6 py-2 rounded-full border border-orange-500/50 text-orange-400 font-bold mb-4 flex flex-col items-center leading-tight">
+                 <span className="uppercase">{t.label_final}</span>
+                 <span className="text-sm mt-1">{t.date_final}</span>
+              </div>
+              <Countdown targetDate={targetDateFinal} lang={lang} />
+            </div>
           </div>
-          <Countdown targetDate={targetDate} lang={lang} />
         </div>
       </section>
 
