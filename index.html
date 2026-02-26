@@ -339,8 +339,12 @@
                     </section>
 
                     {/* ORGANITZA */}
-                    <section id="organitza" className="section-full items-center bg-[#0a1a33]/60 text-center">
-                        <div className="max-w-6xl w-full px-4">
+                    <section id="organitza" className="section-full items-center text-center relative">
+                        <div className="absolute inset-0 z-0">
+                            <img src="https://agora.xtec.cat/iticbcn/wp-content/uploads/usu2389/2023/02/Benvinguda-a-lITICBCN-1024x640.jpg" alt="Institut TIC Background" className="w-full h-full object-cover opacity-20 mix-blend-luminosity" />
+                            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1e] via-[#0a1a33]/80 to-[#0a0f1e]"></div>
+                        </div>
+                        <div className="max-w-6xl w-full px-4 relative z-10">
                             <h2 className="text-4xl md:text-8xl font-black mb-12 md:mb-20 uppercase text-itic-blue tracking-tighter">{t.organizes}</h2>
                             <div className="glass p-8 md:p-16 rounded-[40px] border-white/10 shadow-2xl">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 w-full max-w-4xl mx-auto">
